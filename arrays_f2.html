@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HW SOLution</title>
+</head>
+<body>
+    
+    <script>
+
+        const _numbers = [2, 4, 6, 8, 10, 8];
+        let all_even = _numbers.every((x, index, arr) => x % 2 == 0)
+        //_numbers.filter(x => x % 2 == 0).length == _numbers.length
+
+        let at_least_1_even = _numbers.some(x => x % 2 == 0)
+        //_numbers.filter(x => x % 2 == 0).length > 0
+
+        let first_item_6 = _numbers.find(x => x > 6) // 8
+        let first_item_60 = _numbers.find(x => x > 60) // undefined
+
+        let first_index_8  = _numbers.findIndex(x => x == 8) // 3
+        let first_index_18 = _numbers.findIndex(x => x == 18) // -1
+
+    </script>
+</body>
+</html>

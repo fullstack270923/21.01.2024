@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>arrays</title>
+</head>
+<body>
+    <script>
+
+        const arr1 = [1, 2, 3, 4, 5]
+        
+        arr1.forEach(x => {
+            document.write(`--${x}-- <br/>`)
+        })
+        // FOR-EACH
+        for (let i = 0; i < arr1.length; i++) {
+            document.write(`--${arr1[i]}-- <br/>`)
+        }
+
+        arr1_r = arr1.map(x => x**2)
+        arr1.map(x => {
+            document.write(`--${x}-- <br/>`)
+        })
+        arr1_r2 = []
+        // MAP
+        for (let i = 0; i < arr1.length; i++) {
+            arr1_r2.push(arr1[i] ** 2)
+        }        
+        console.log(arr1_r);
+        document.write(arr1 + '<br />')
+        document.write(arr1_r + '<br />')
+
+        
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>DOM manipulation4</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+    <script>
+
+        const image = document.createElement("img"); // Create an <img> element
+        image.src = "https://media.istockphoto.com/id/1294703794/photo/woman-playing-chess.jpg?s=1024x1024&w=is&k=20&c=v8OJZYYi13Pvfbx6H4FJ_ArqW48RXpdooJjhW6u24Nk="; // Set the image source
+        image.alt = "Description of image"; // Set alternative text
+        document.body.appendChild(image); // Append it to the body
+        document.body.appendChild(document.createElement("br"))
+        document.body.appendChild(document.createElement("br"))
+
+        for (let i = 1; i <= 5; i++) {
+            const button = document.createElement("button"); // Create a <button> element
+            button.textContent = `Click me! ${i}`; // Set button text
+            button.id = `btn${i}`
+            button.addEventListener("click", () => alert(`Button ${i} was clicked!`)); // Add click event
+            document.body.appendChild(button); // Append it to the body
+        }
+
+        document.body.appendChild(document.createElement("br"))
+        document.body.appendChild(document.createElement("br"))
+
+        const list = document.createElement("ul"); // Create a <ul> element
+
+        const listItem1 = document.createElement("li"); // Create a <li> element
+        listItem1.textContent = "First item"; // Set text
+        list.appendChild(listItem1); // Append it to the list
+
+        const listItem2 = document.createElement("li"); // Create another <li> element
+        listItem2.textContent = "Second item"; // Set text
+        list.appendChild(listItem2); // Append it to the list
+
+        document.body.appendChild(list); // Append the list to the body
+
+        const anchor = document.createElement("a"); // Create an <a> (anchor) element
+        anchor.href = "https://www.ynet.co.il"; // Set href attribute
+        anchor.textContent = "Read news ..."; // Set link text
+        document.body.appendChild(anchor); // Append it to the body
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>DOM manipulation3</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+    <hr />
+    <div id="result">
+        <p>HI</p>
+        <h1>Second child</h1>
+    </div>
+    <hr />
+    <button id="btn1" onclick="remove_all_click()">REMOVE ALL</button> <br />
+    <button id="btn2" onclick="remove_click()">REMOVE</button> <br />
+    <button id="btn3" onclick="add_click()">ADD</button>
+    <script>
+        // ---------- advanced
+        let par1 = document.createElement("p")
+        par1.textContent = "This is a new paragraph!"
+        let id = 1
+
+        function add_click() {
+            let new_par = document.createElement("p")
+            new_par.textContent = `This is a new paragraph! ${Date()}`
+            new_par.id = `p${id++}`
+            document.getElementById('result').appendChild(new_par)
+        }
+
+        function remove_click() {
+            const p1 = document.getElementById(`p${--id}`)
+            if (p1) {
+                document.getElementById('result').removeChild(p1)
+            }
+        }
+
+        function remove_all_click() {
+            console.log(document.getElementById('result').children);
+
+            while (document.getElementById('result').children.length > 0) {
+                const child1 = document.getElementById('result').children[0]
+                document.getElementById('result').removeChild(child1)
+
+                console.log(document.getElementById('result').children);
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

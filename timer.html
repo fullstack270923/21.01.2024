@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>DOM manipulation</title>
+
+</head>
+
+<body>
+    <p>TIMER: </p>
+    <p id="myParagraph">30</p>
+
+    <script>
+        let timer = 30
+        function show_timer() {
+            document.getElementById('myParagraph').innerHTML = `${timer--}`
+            if (timer == 0 ) {
+                // remove timer
+                clearInterval(show_timer)
+            }
+        }
+
+        setInterval(show_timer, 1000);
+
+    </script>
+
+</body>
+
+</html>

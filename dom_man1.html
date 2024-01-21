@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>DOM manipulation1</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+    <p id="myParagraph">Hello, World!</p>
+    <button id="btn1" onclick="addClass()">Add Highlight</button>
+    <button onclick="removeClass()">Remove Highlight</button>
+    <button onclick="toggleClass()">Toggle Highlight</button>
+
+    <script>
+        function addClass() {
+            document.getElementById('myParagraph').classList.add('highlight')
+        }
+
+        function removeClass() {
+            document.getElementById('myParagraph').classList.remove('highlight')
+        }
+
+        function toggleClass() {
+            document.getElementById('myParagraph').classList.toggle('highlight')
+        }
+    </script>
+
+</body>
+
+</html>

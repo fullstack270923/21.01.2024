@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>DOM manipulation1</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+    <hr />
+    <div id="result">
+        HI
+    </div>
+    <hr />
+    <button id="btn1" onclick="remove_click()">REMOVE</button> <br />
+    <button id="btn1" onclick="add_click()">ADD</button>
+    <script>
+        let par1 = document.createElement("p")
+        par1.textContent = "This is a new paragraph!"
+
+        //document.body.appendChild(par1)
+
+        function add_click() {
+            document.getElementById('result').appendChild(par1)
+        }
+
+        function remove_click() {
+            document.getElementById('result').removeChild(par1)
+        }        
+
+    </script>
+
+</body>
+
+</html>

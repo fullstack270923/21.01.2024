@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HW SOLution</title>
+</head>
+<body>
+    
+    <script>
+
+        const celsiusTemps = [0, 30, 100];
+        const fahreneit = celsiusTemps.map(t => t * 9/5 + 32)
+        console.log(fahreneit);
+        
+        const names = ["Alice", "Bob", "Charlie"];
+        const hello_names = names.map(name => `Hello ${name}`)
+        console.log(hello_names);
+
+        const numbers = [2, -4, 5, -8];
+        const opp = numbers.map(num => num * (-1))
+        console.log(opp);
+        const neg = numbers.map(num => -1 * Math.abs(num))
+        console.log(neg);
+
+        const nums = [10, 20, 30, 40];
+        let sum = 0
+        nums.forEach(num => sum += num)
+        console.log(`${nums}\n =SUM: ${sum}`);
+
+        const words = ['JavaScript', 'is', 'awesome'];
+        let str = "'"
+        words.forEach(word => str += (str != "'" ? ' ':'') + word)
+        str += "'"
+        console.log(str);
+        console.log(words.join(' '))
+
+        const _numbers = [2, 4, 6, 8, 10];
+        let all_even = true
+        _numbers.forEach(x => {
+            if (x % 2 == 1)
+            all_even = false
+        })
+
+        _numbers.forEach(x => all_even = all_even && x % 2 == 0)
+
+        _numbers.forEach(x => x % 2 != 0 ? all_even = false : 0)
+        
+        console.log(all_even ? 'the array contains only even numbers':
+                        'the array DOES NOT contain only even numbers');
+
+        console.log(_numbers.filter(x => x % 2 == 0).length == _numbers.length ?
+                        'the array contains only even numbers':
+                        'the array DOES NOT contain only even numbers');
+
+        console.log(_numbers.filter(x => x % 2 == 1).length == 0 ?
+                        'the array contains only even numbers':
+                        'the array DOES NOT contain only even numbers');
+                        
+
+    </script>
+</body>
+</html>

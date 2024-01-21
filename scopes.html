@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>functions</title>
+</head>
+<body>
+    <input type="text" id="input-txt">
+    <script>
+
+        let x = 1 //x1
+
+        foo()
+
+        function foo() {
+            let x = 2 // x2
+            goo()
+        }
+
+        function goo() {
+            let x = 3 // x3
+            moo(x)
+            console.log(x); // 3
+        }
+
+        function moo(x) {
+            x++ // x4
+            console.log(4);
+            xoo(document.getElementById('input-txt'))
+        }
+
+        function xoo(d) {
+            d.value = "new value" // this will change the text of the input-text
+        }
+
+    </script>
+
+</body>
+</html>
